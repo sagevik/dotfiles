@@ -1,0 +1,19 @@
+[user]
+	email = rsagevik@gmail.com
+	name = sagevik
+[push]
+	default = simple
+[core]
+	editor = vim
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    dt = difftool -tool=vimdiff
+[color]
+	ui = auto
+[difftool]
+    tool = vimdiff
+    prompt = false
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[init]
+	defaultBranch = main
