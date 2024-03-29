@@ -59,3 +59,6 @@ alias wallpaper="python3 $HOME/.dotfiles/scripts/change_wallpaper.py"     # Chan
 
 # Snap clean up
 alias cleansnap="$HOME/.dotfiles/scripts/clean_snap.sh"             # Clean disabled snap's
+
+# Pipewire control
+alias pipewirecontrol="cd $HOME/.config/pipewire-controller && python3 $HOME/.config/pipewire-controller/pipewire-control.py && cd"
