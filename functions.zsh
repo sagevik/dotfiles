@@ -64,3 +64,7 @@ countallsubfoldersindir(){
 targz() { tar -zcvf $1.tgz $1; rm -r $1; }
 # extract .tar.gz
 untargz() { tar -zxvf $1; rm -r $1; }
+
+sortphotos(){
+    exiftool -r '-FileName<CreateDate' -d %Y-%m-%d/%Y-%m-%d_%H%M%S%%-c.%%e $1
+}
