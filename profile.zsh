@@ -20,10 +20,10 @@ source $DOTFILES/poetry.zsh
 #export PS1="$green\u:$yellow\$(__git_ps1)$red \W $ $reset"
 
 # Golang
-#export GOPRIVATE=bitbucket.org/*
-#export PATH=$PATH:/usr/local/go/bin
-#export GOPATH=$HOME/Develop/go
-#export PATH=$PATH:$GOPATH:$HOME/Develop/go/bin
+export GOPRIVATE=bitbucket.org/*
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Develop/go
+export PATH=$PATH:$GOPATH:$HOME/Develop/go/bin
 
 # Paths
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
