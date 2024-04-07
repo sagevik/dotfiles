@@ -1,6 +1,11 @@
 #Useful zsh aliases
 alias reload=" source ~/.zshrc"
 
+# select graphics card
+alias gpunvidia="sudo system76-power graphics nvidia"
+alias gpuintegrated="sudo system76-power graphics integrated"
+alias gpuselected="sudo system76-power graphics"
+
 # ls commands
 alias lsd="ls -ld */"                                                   # List directories only
 
