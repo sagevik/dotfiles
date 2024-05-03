@@ -25,8 +25,6 @@ if current_wp in files:
 if files:
     rnd_idx = random.randint(0, len(files)-1)
     new_wp = files[rnd_idx]
-    print(new_wp)
-    print(wallpaper_file)
     copy(new_wp, wallpaper_file)
 
     # check for mode (light or dark)
@@ -46,6 +44,10 @@ if files:
     subpscreensaver = ["gsettings", "set", "org.gnome.desktop.screensaver",
                        "picture-uri", wallpaper_file]
     subprocess.call(subpscreensaver)
+
+    if "regolith" in os.environ.get('XDG_CURRENT_DESKTOP').lower():
+        subpbackground = ["regolith-look", "refresh"]
+        subprocess.call(subpbackground)
 
     with open(cur_file, 'w') as cf:
         cf.write(new_wp)
