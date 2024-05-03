@@ -2,10 +2,14 @@
 import os
 import random
 import subprocess
+from  shutil import copy
 
 user = os.getlogin()
 wp_dir = f"/home/{user}/Pictures/Wallpapers"
-cur_file = os.path.join(wp_dir, '.current')
+current_dir = os.path.join(wp_dir, ".current")
+cur_file = os.path.join(current_dir, '.current')
+wallpaper_file = os.path.join(current_dir, "wallpaper.jpg")
+#cur_file = os.path.join(wp_dir, '.current')
 
 imgs = os.listdir(wp_dir)
 files = [os.path.join(wp_dir, f) for f in imgs if not f == ".current"]
@@ -21,6 +25,9 @@ if current_wp in files:
 if files:
     rnd_idx = random.randint(0, len(files)-1)
     new_wp = files[rnd_idx]
+    print(new_wp)
+    print(wallpaper_file)
+    copy(new_wp, wallpaper_file)
 
     # check for mode (light or dark)
     mode = "picture-uri-dark"
@@ -32,12 +39,12 @@ if files:
     if "prefer-dark" not in out.decode("utf-8"):
         mode = "picture-uri"
 
-    wp_file = "file://" + new_wp
+    wp_file = "file://" + wallpaper_file
     subpbackground = ["gsettings", "set", "org.gnome.desktop.background",
-                      mode, wp_file]
+                      mode, wallpaper_file]
     subprocess.call(subpbackground)
     subpscreensaver = ["gsettings", "set", "org.gnome.desktop.screensaver",
-                       "picture-uri", wp_file]
+                       "picture-uri", wallpaper_file]
     subprocess.call(subpscreensaver)
 
     with open(cur_file, 'w') as cf:
