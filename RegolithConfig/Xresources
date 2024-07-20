@@ -1,0 +1,20 @@
+!regolith.look.path: /usr/share/regolith-look/default
+regolith.look.path: /usr/share/regolith-look/lascaille
+regolith.wallpaper.file: /home/rs/Pictures/Wallpapers/moss2.jpg
+regolith.lockscreen.wallpaper.file: /home/rs/Pictures/Wallpapers/moss2.jpg
+
+! Bar configuration
+wm.bar.position: top
+
+! Name workspaces
+!wm.workspace.01.name: 1:<ws_name>
+
+! Dateformat
+i3xrocks.date.format2: %a %d/%m %H:%M
+
+! Bar colors
+!wm.bar.workspace.focused.background.color: #bada55
+!wm.bar.workspace.focused.border.color: #bada55
+
+!wm.bar.workspace.inactive.background.color: #cbbeb5
+!wm.bar.workspace.inactive.border.color: #cbbeb5
