@@ -1,3 +1,5 @@
+! Symlink this file to: /home/<USER>/.config/regolith3
+
 !regolith.look.path: /usr/share/regolith-look/default
 regolith.look.path: /usr/share/regolith-look/lascaille
 regolith.wallpaper.file: /home/rs/Pictures/Wallpapers/moss2.jpg
